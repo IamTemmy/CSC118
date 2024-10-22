@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+//use the double function to enable decimal input 
+    double val1;
+    double val2;
+    double val3;
+    double val4;
+    double val5;
+    double sum;
+    
+//User inputs first decimal value    
+    cout << "Enter first decimal value: ";
+    cin >> val1;
+//User inputs second decimal value 
+    cout << "Enter second decimal value: ";
+    cin >> val2;
+//User inputs third decimal value 
+    cout << "Enter third decimal value: ";
+    cin >> val3;
+//User inputs fourth decimal value 
+    cout << "Enter fourth decimal value: ";
+    cin >> val4;
+//User inputs fifth decimal value 
+    cout << "Enter fifth decimal value: ";
+    cin >> val5;
+    
+//arithmetic to calculate the sum of five decimal numbers
+    sum = val1 + val2 + val3 + val4 + val5;
+    
+//function from cmath library allows to round up to nearest whole number
+    int nearestInt = round(sum);
+    
+//prints out the total sum of five decimals in its rounded whole number form    
+    cout << "Total = " << nearestInt << endl;
+    
+}
