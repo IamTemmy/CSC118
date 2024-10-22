@@ -1,0 +1,39 @@
+//NAME: Temiloluwa Adesola
+
+// a. Write a C++ statement that includes the header file iostream.
+#include <iostream>
+
+// b. Write a C++ statement that allows you to use cin, cout, and endl without the prefix std::.
+/*the using namespace std statement enables a user to use the cin, cout, and endl without needing to add
+multiple std:: statements */
+using namespace std;
+
+int main() 
+{
+// c. Write C++ statement(s) that declare the following variables: num1, num2, num3, and average of type int.
+    int num1;
+    int num2;
+    int num3;
+    int average;
+    
+// d. Write C++ statement(s) that store 125 into num1, 28 into num2, and -25 into num3.
+    num1 = 125;
+    //125 assigned to num1
+    num2 = 28;
+    //28 assigned to num2
+    num3 = -25;
+    //-25 assigned to 
+    
+// e. Write a C++ statement that stores the average of num1, num2, and num3 into average.
+    average = (num1 + num2 + num3) / 3;
+    
+// f. Write C++ statement(s) that output the values of num1, num2, num3, and average.
+    cout << "num1 = " << num1 << endl;
+    cout << "num2 = " << num2 << endl;
+    cout << "num3 = " << num3 << endl;
+    cout << "Average value of three numbers = " << average << endl;
+    
+    return 0;
+}
+
+// g.Compile and run your program.
