@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{    
+    double netBalance;
+    double payment;
+    int d1; // number of days in the billing cycle
+    int d2; // number of days payment is made before the billing cycle
+    double averageDailyBalance;
+    double interestRate; // interest rate for the month
+    double interest; // interest in dollars
+
+    cout << "Enter net balance amount: $";
+    cin >> netBalance;
+
+    // Loop until payment is less than or equal to net balance
+    do {
+        cout << "How much do you want to pay?: $";
+        cin >> payment;
+
+        if (payment > netBalance) {
+         cout << "Sorry, you cannot pay above $" << netBalance << ", because your account will result in a credit balance.\n" << endl;
+         cout << "Please re-enter the payment amount.\n";
+        }
+    } while (payment > netBalance);
+
+    cout << "Number of days in the billing cycle: ";
+    cin >> d1;
+
+    cout << "Number of days payment is made before the billing cycle: ";
+    cin >> d2;
+
+    cout << "Enter the interest rate per month (%): ";
+    cin >> interestRate;
+
+    averageDailyBalance = (netBalance * d1 - payment * d2) / d1;
+    interest = averageDailyBalance * interestRate/100;
+
+    // Interest rate set to two decimal places
+    cout << "Your interest to be paid for this month is: $" << fixed << setprecision(2) << interest << endl;
+
+}
