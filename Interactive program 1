@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+string name, place;
+int age, D_age;
+
+int main()
+{
+    cout << "What is your name? ";
+    cin >> name;
+    cout << "\n";
+    
+    cout << name << " how old are you? ";
+    cin >> age;
+    cout << "\n";
+    
+    D_age = age * 365;
+    
+    cout << "You are only " << age << " years old" << endl << "\n";
+    
+    cout << "Waoo, you have been around for " << D_age << " days" << endl << "\n";
+    
+    cout << "Where are you from? ";
+    cin >> place;
+    cout << "\n";
+    
+    cout << "I am also from " << place << endl << "\n";
+    
+    cout << "This is my third C++ program, and I love it!" << endl;
+}
+
+//Output
+
