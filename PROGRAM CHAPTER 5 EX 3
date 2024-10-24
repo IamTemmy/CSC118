@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char letter;  // Variable to store the letter input
+    int digit;    // Variable to store the corresponding telephone digit
+    int num;      // Variable to store the numeric value of the letter (0-25 for 'A' to 'Z')
+    
+    // Introductory message for the user
+    cout << "Program to convert letters to their corresponding telephone digits." << endl;
+    
+    // Input loop continues until the user enters '#'
+    while (letter != '#') {
+        cout << "Enter a letter: ";
+        cin >> letter;
+        cout << endl;
+
+        // Check if the input is valid before proceeding
+        if (letter == '#') {
+            break;  // If the input is '#', exit the loop
+        }
+
+        // Convert the letter to a number (0-25 for 'A' to 'Z')
+        num = static_cast<int>(letter) - static_cast<int>('A');
+
+        // Adjust for lowercase letters if the input is lowercase
+        if (num > 25) {
+            num = num - 32;  // Convert lowercase letter to corresponding uppercase value
+        }
+
+        // Check if the letter is valid (between 'A' and 'Z')
+        if (0 <= num && num <= 25) {
+            // Calculate the corresponding telephone digit
+            digit = (num / 3) + 2;
+
+            // Special case for 'S', 'Z', etc.
+            if (((num / 3 == 6) || (num / 3 == 7)) && (num % 3 == 0)) {
+                digit = digit - 1;
+            }
+
+            // Output the corresponding digit
+            cout << "Letter: " << letter << ", Corresponding telephone digit: " << digit << endl;
+        } else {
+            // Handle invalid input
+            cout << "Invalid input." << endl;
+        }
+
+        // Prompt the user for another letter
+        cout << "\nEnter another uppercase letter to find its corresponding telephone digit." << endl;
+        cout << "To stop the program, enter #." << endl;
+    }
+
+    return 0;
+}
+
+//OUTPUT 
