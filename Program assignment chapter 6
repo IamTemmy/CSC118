@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Function to check if a character is a vowel
+bool isVowel(char ch) {
+    ch = tolower(ch); // Convert character to lowercase for case-insensitivity
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
+
+int main() {
+    string input;
+    int vowelCount = 0;
+
+    // Prompt user to enter a sequence of characters
+    cout << "Enter a sequence of characters: ";
+    getline(cin, input);
+
+    // Loop through each character in the input string
+    for (char ch : input) {
+        if (isVowel(ch)) {
+            vowelCount++;
+        }
+    }
+
+    // Output the number of vowels
+    cout << "The number of vowels in the sequence is: " << vowelCount << endl;
+
+    return 0;
+}
+
+//OUTPUT
